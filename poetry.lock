@@ -1,5 +1,16 @@
 [[package]]
 category = "main"
+description = "A tiny library for monitoring and testing asyncio programs"
+name = "aiodebug"
+optional = false
+python-versions = "*"
+version = "1.1.2"
+
+[package.extras]
+logwood = ["logwood (>=3.0.0,<4.0.0)"]
+
+[[package]]
+category = "main"
 description = "Atomic file writes."
 marker = "sys_platform == \"win32\""
 name = "atomicwrites"
@@ -185,11 +196,14 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "9e8bb4842e68d6a4f5682907b0777f46cf01f9f2c9756c4561fa265399a5cd47"
+content-hash = "16c8c2550c550753ec3f94fc2461361ae77f0583b7cbd514c7529576e22251c7"
 lock-version = "1.0"
 python-versions = "^3.7"
 
 [metadata.files]
+aiodebug = [
+    {file = "aiodebug-1.1.2.tar.gz", hash = "sha256:061dd0067f80a433a1e4fa4f76dd1b4cf366ee0ce2035e462ba3af00c79241ea"},
+]
 atomicwrites = [
     {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
     {file = "atomicwrites-1.4.0.tar.gz", hash = "sha256:ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"},

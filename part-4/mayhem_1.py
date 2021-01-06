@@ -3,7 +3,7 @@
 Notice! This requires: 
  - attrs==19.1.0
 """
-
+from aiodebug import log_slow_callbacks
 import signal
 import logging
 import queue
@@ -169,6 +169,8 @@ def main():
     handle_exc_func = functools.partial(handle_exception, executor)
     loop.set_exception_handler(handle_exc_func)
     q = queue.Queue()
+
+    log_slow_callbacks.enable(0.05)
 
     try:
         loop.create_task(publish(executor, q))
